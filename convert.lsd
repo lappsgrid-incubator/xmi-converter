@@ -1,0 +1,86 @@
+#!/usr/bin/env lsd
+
+// This script assumes that you have the LSD (Lappsgrid Services DSL) interpreter installed on your system.
+// If not, it can be downloaded from https://downloads.lappsgrid.org/lsd-latest.tgz
+import groovy.xml.QName
+
+VAERS = "http:///gov/hhs/fda/srs/annotation/vaers.ecore"
+
+File file = new File(args[0])
+if (!file.exists()) {
+    println "No such file ${file.path}"
+    return
+}
+
+def parser = new XmlParser()
+Node root = parser.parseText(file.text)
+container = new Container()
+view = container.newView()
+
+process(root)
+
+println Serializer.toPrettyJson(container)
+return
+
+void process(Node node) {
+    def name = node.name()
+    Map attributes = node.attributes()
+    // At least one of the example XML files does not use a QName for
+    // the View element.
+    if ((name instanceof String && name == 'View') || name.localPart == 'View') {
+        view.metadata.put('members', attributes.members)
+        view.metadata.put('sofa', attributes.sofa)
+    }
+    else {
+        QName qname = (QName) name
+        if (qname.localPart == 'Sofa') {
+            container.metadata.put('sofaID', attributes.get('sofaID'))
+            container.metadata.put('sofaNum', attributes.get('sofaNum'))
+            container.text = attributes.get('sofaString')
+        }
+        else if (qname.localPart == 'DocumentAnnotation') {
+            QName idAtt = new QName("http://www.omg.org/XMI", "id")
+            String id = attributes.get(idAtt)
+            String type = "http:///uima/tcas.ecore/DocumentAnnotation"
+            Annotation a = view.newAnnotation(id, type)
+            a.start = attributes.get('begin') as Long
+            a.end = attributes.get('end') as Long
+            a.features['sofa'] = attributes.get('sofa')
+            container.language = attributes.get('language')
+        }
+        else if (qname.localPart == 'DocumentMetaData') {
+            container.language = attributes.get('language')
+            ['sofa', 'begin', 'end', 'documentTitle', 'documentId', 'isLastSegment'].each { att ->
+                container.metadata.put(att, attributes.get(att))
+            }
+        }
+        else if (qname.localPart == 'XMI' || qname.localPart == 'NULL') {
+            // Ignore. We just want to prevent the processing below.
+        }
+        else {
+            Annotation a = view.newAnnotation()
+            a.atType = "${qname.namespaceURI}/${qname.localPart}"
+            attributes.each { key, value ->
+                if (key instanceof QName) {
+                    if (key.localPart == 'id') {
+                        a.id = value
+                    }
+                    else {
+                        a.addFeature("${key.prefix}:${key.localPart}", value)
+                    }
+                }
+                else if (key == 'begin') {
+                    a.start = value as long
+                }
+                else if (key == 'end') {
+                    a.end = value as long
+                }
+                else {
+                    a.addFeature(key, value)
+                }
+            }
+        }
+    }
+    node.children().each { process it }
+}
+

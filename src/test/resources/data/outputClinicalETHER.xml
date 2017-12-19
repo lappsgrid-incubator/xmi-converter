@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xmi:XMI xmlns:cas="http:///uima/cas.ecore" xmlns:tcas="http:///uima/tcas.ecore" xmlns:vaers="http:///gov/hhs/fda/srs/annotation/vaers.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+  <cas:NULL xmi:id="0"/>
+  <tcas:DocumentAnnotation begin="0" end="634" language="en" sofa="6" xmi:id="1"/>
+  <vaers:CategoryMedicalHistory begin="44" end="85" sofa="6" text="significant dizziness fainting spells" xmi:id="2"/>
+  <vaers:Vaccine begin="136" end="140" sofa="6" text="vax1" xmi:id="3"/>
+  <vaers:Vaccine begin="172" end="176" sofa="6" text="vax2" xmi:id="4"/>
+  <vaers:Symptom begin="226" end="237" sofa="6" text="vaccination" xmi:id="5"/>
+  <vaers:SecondLevelDiagnosis begin="252" end="286" sofa="6" text="shortness breath and chest pain" xmi:id="6"/>
+  <vaers:PrimaryDiagnosis begin="323" end="334" sofa="6" text="myocarditis" xmi:id="7"/>
+  <vaers:Symptom begin="367" end="514" sofa="6" text="vaccination, performed electrocardiogram, levels measured and found" xmi:id="8"/>
+  <vaers:PrimaryDiagnosis begin="552" end="556" sofa="6" text="died" xmi:id="9"/>
+  <vaers:CategoryCauseOfDeath begin="580" end="593" sofa="6" text="heart failure" xmi:id="10"/>
+  <cas:Sofa mimeType="text" sofaID="_InitialView" sofaNum="1" sofaString="A 33 year-old man with past medical history significant for dizziness/fainting spells received the following vaccines on 10 March 2010: VAX1 (lot number not reported); and VAX2 (lot number not reported either). Ten days after vaccination, he developed shortness of breath and chest pain and was subsequently diagnosed with myocarditis. On Day 20 (30 March 2010) post vaccination, the following tests were performed: an electrocardiogram which was reported to be normal and troponin I levels were measured and found to be 12.3 ng/ml (abnormal). Patient died on 02 April 2010. COD: heart failure. List of documents held by sender: None." xmi:id="11"/>
+  <View members="0 1 2 3 4 5 6 7 8 9 10 11" sofa="6"/>
+</xmi:XMI>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:cas="http:///uima/cas.ecore" xmlns:tcas="http:///uima/tcas.ecore" xmlns:vaers="http:///gov/hhs/fda/srs/annotation/vaers.ecore" xmi:version="2.0">
+<cas:NULL xmi:id="0"/>
+<tcas:DocumentAnnotation begin="0" end="633" sofa="6" xmi:id="1"/>
+<vaers:ClinicalFeature begin="473" class="PREF" end="481" ontology="MEDDRA" preferred_term="Troponin" text="troponin" xmi:id="2"/>
+<vaers:ClinicalFeature begin="252" class="PREF" end="271" ontology="MEDDRA" preferred_term="Shortness of breath" text="shortness of breath" xmi:id="3"/>
+<vaers:ClinicalFeature begin="276" class="PREF" end="286" ontology="MEDDRA" preferred_term="Chest pain" text="chest pain" xmi:id="4"/>
+<vaers:ClinicalFeature begin="419" class="PREF" end="436" ontology="MEDDRA" preferred_term="Electrocardiogram" text="electrocardiogram" xmi:id="5"/>
+<vaers:ClinicalFeature begin="580" class="PREF" end="593" ontology="MEDDRA" preferred_term="Heart failure" text="heart failure" xmi:id="6"/>
+<vaers:ClinicalFeature begin="367" class="PREF" end="378" ontology="MEDDRA" preferred_term="Vaccination" text="vaccination" xmi:id="7"/>
+<vaers:ClinicalFeature begin="282" class="PREF" end="286" ontology="MEDDRA" preferred_term="Pain" text="pain" xmi:id="8"/>
+<vaers:ClinicalFeature begin="226" class="PREF" end="237" ontology="MEDDRA" preferred_term="Vaccination" text="vaccination" xmi:id="9"/>
+<vaers:ClinicalFeature begin="70" class="PREF" end="78" ontology="MEDDRA" preferred_term="Fainting" text="fainting" xmi:id="10"/>
+<vaers:ClinicalFeature begin="473" class="PREF" end="483" ontology="MEDDRA" preferred_term="Troponin I" text="troponin I" xmi:id="11"/>
+<vaers:ClinicalFeature begin="323" class="PREF" end="334" ontology="MEDDRA" preferred_term="Myocarditis" text="myocarditis" xmi:id="12"/>
+<vaers:ClinicalFeature begin="60" class="PREF" end="69" ontology="MEDDRA" preferred_term="Dizziness" text="dizziness" xmi:id="13"/>
+<cas:Sofa mimeType="text" sofaID="_InitialView" sofaNum="1" sofaString="A 33 year-old man with past medical history significant for dizziness/fainting spells received the following vaccines on 10 March 2010: VAX1 (lot number not reported); and VAX2 (lot number not reported either). Ten days after vaccination, he developed shortness of breath and chest pain and was subsequently diagnosed with myocarditis. On Day 20 (30 March 2010) post vaccination, the following tests were performed: an electrocardiogram which was reported to be normal and troponin I levels were measured and found to be 12.3 ng/ml (abnormal). Patient died on 02 April 2010. COD: heart failure. List of documents held by sender: None." xmi:id="14"/>
+<cas:View members="1 2 3 4 5 6 7 8 9 10 11 12 13 14" sofa="6"/>
+</xmi:XMI>

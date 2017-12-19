@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xmi:XMI xmlns:cas="http:///uima/cas.ecore" xmlns:tcas="http:///uima/tcas.ecore" xmlns:vaers="http:///gov/hhs/fda/srs/annotation/vaers.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+  <cas:NULL xmi:id="0"/>
+  <tcas:DocumentAnnotation begin="0" end="634" language="en" sofa="6" xmi:id="1"/>
+  <vaers:TemporalRelation CID="E13" CoreText="dizziness" Date="2010-03-10" RID="T2" RefText="10 March 2010" Relation="OVERLAP" sofa="6" xmi:id="2"/>
+  <vaers:TemporalRelation CID="E10" CoreText="fainting" Date="2010-03-10" RID="T2" RefText="10 March 2010" Relation="OVERLAP" sofa="6" xmi:id="3"/>
+  <vaers:TemporalRelation CID="E9" CoreText="vaccination" Date="2010-03-20" RID="T3" RefText="Ten days" Relation="OVERLAP" sofa="6" xmi:id="4"/>
+  <vaers:TemporalRelation CID="E3" CoreText="shortness of breath" Date="2010-03-20" RID="T3" RefText="Ten days" Relation="OVERLAP" sofa="6" xmi:id="5"/>
+  <vaers:TemporalRelation CID="E4" CoreText="chest pain" Date="2010-03-20" RID="T3" RefText="Ten days" Relation="OVERLAP" sofa="6" xmi:id="6"/>
+  <vaers:TemporalRelation CID="E8" CoreText="pain" Date="2010-03-20" RID="T3" RefText="Ten days" Relation="OVERLAP" sofa="6" xmi:id="7"/>
+  <vaers:TemporalRelation CID="E12" CoreText="myocarditis" Date="2010-03-20" RID="T3" RefText="Ten days" Relation="OVERLAP" sofa="6" xmi:id="8"/>
+  <vaers:TemporalRelation CID="E7" CoreText="vaccination" Date="2010-03-30" RID="T5" RefText="30 March 2010" Relation="OVERLAP" sofa="6" xmi:id="9"/>
+  <vaers:TemporalRelation CID="E5" CoreText="electrocardiogram" Date="2010-03-30" RID="T5" RefText="30 March 2010" Relation="OVERLAP" sofa="6" xmi:id="10"/>
+  <vaers:TemporalRelation CID="E2" CoreText="troponin" Date="2010-03-30" RID="T5" RefText="30 March 2010" Relation="OVERLAP" sofa="6" xmi:id="11"/>
+  <vaers:TemporalRelation CID="E11" CoreText="troponin I" Date="2010-03-30" RID="T5" RefText="30 March 2010" Relation="OVERLAP" sofa="6" xmi:id="12"/>
+  <cas:Sofa mimeType="text" sofaID="_InitialView" sofaNum="1" sofaString="A 33 year-old man with past medical history significant for dizziness/fainting spells received the following vaccines on 10 March 2010: VAX1 (lot number not reported); and VAX2 (lot number not reported either). Ten days after vaccination, he developed shortness of breath and chest pain and was subsequently diagnosed with myocarditis. On Day 20 (30 March 2010) post vaccination, the following tests were performed: an electrocardiogram which was reported to be normal and troponin I levels were measured and found to be 12.3 ng/ml (abnormal). Patient died on 02 April 2010. COD: heart failure. List of documents held by sender: None." xmi:id="13"/>
+  <View members="0 1 2 3 4 5 6 7 8 9 10 11 12 13" sofa="6"/>
+</xmi:XMI>

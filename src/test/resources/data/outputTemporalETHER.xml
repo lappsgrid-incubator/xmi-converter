@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xmi:XMI xmlns:cas="http:///uima/cas.ecore" xmlns:tcas="http:///uima/tcas.ecore" xmlns:vaers="http:///gov/hhs/fda/srs/annotation/vaers.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+  <cas:NULL xmi:id="0"/>
+  <tcas:DocumentAnnotation begin="0" end="634" language="en" sofa="6" xmi:id="1"/>
+  <vaers:Date Date="2010-03-10" begin="121" end="133" sofa="6" text="10 March 2010" xmi:id="2"/>
+  <vaers:Relative begin="211" end="218" sofa="6" text="Ten days" xmi:id="3"/>
+  <vaers:Relative begin="339" end="344" sofa="6" text="Day 20" xmi:id="4"/>
+  <vaers:Date Date="2010-03-30" begin="347" end="359" sofa="6" text="30 March 2010" xmi:id="5"/>
+  <vaers:Date Date="2010-04-02" begin="560" end="572" sofa="6" text="02 April 2010" xmi:id="6"/>
+  <cas:Sofa mimeType="text" sofaID="_InitialView" sofaNum="1" sofaString="A 33 year-old man with past medical history significant for dizziness/fainting spells received the following vaccines on 10 March 2010: VAX1 (lot number not reported); and VAX2 (lot number not reported either). Ten days after vaccination, he developed shortness of breath and chest pain and was subsequently diagnosed with myocarditis. On Day 20 (30 March 2010) post vaccination, the following tests were performed: an electrocardiogram which was reported to be normal and troponin I levels were measured and found to be 12.3 ng/ml (abnormal). Patient died on 02 April 2010. COD: heart failure. List of documents held by sender: None." xmi:id="7"/>
+  <View members="0 1 2 3 4 5 6 7" sofa="6"/>
+</xmi:XMI>
