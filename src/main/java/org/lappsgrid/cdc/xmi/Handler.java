@@ -18,7 +18,7 @@ import java.util.Map;
  * The Handler classes dispatches to one of the other handler types based on the namespace
  * of the element.
  *
- * We make so simplifying assumptions to reduce the number of methods we need to override:
+ * We make some simplifying assumptions to reduce the number of methods we need to override:
  *
  * 1. There are no nested elements other than the root XMI element.
  * 2. No element contains character data
@@ -28,7 +28,7 @@ import java.util.Map;
 public class Handler extends DefaultHandler
 {
 	private Map<String, BaseHandler> handlers;
-	private BaseHandler unkown;
+	private BaseHandler unknown;
 	private Container container;
 	private View view;
 
@@ -39,7 +39,7 @@ public class Handler extends DefaultHandler
 		handlers.put(TcasHandler.NAMESPACE, new TcasHandler());
 		handlers.put(VaersHandler.NAMESPACE, new VaersHandler());
 		handlers.put(XmiHandler.NAMESPACE, new XmiHandler());
-		unkown = new UnknownHandler();
+		unknown = new UnknownHandler();
 	}
 
 	public void startElement(String uri, String localName, String qName, Attributes atts) throws SAXException
@@ -51,7 +51,7 @@ public class Handler extends DefaultHandler
 		}
 		else
 		{
-			unkown.handle(localName, atts);
+			unknown.handle(localName, atts);
 		}
 	}
 
@@ -128,7 +128,7 @@ public class Handler extends DefaultHandler
 			}
 			else if ("View".equals(localName))
 			{
-				unkown.handle(localName, atts);
+				unknown.handle(localName, atts);
 			}
 			else
 			{
