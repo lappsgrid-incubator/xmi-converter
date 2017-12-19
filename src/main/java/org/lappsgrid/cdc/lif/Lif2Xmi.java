@@ -80,8 +80,10 @@ public class Lif2Xmi implements Converter
 		Element cas = document.createElementNS(Namespace.CAS, "cas:NULL");
 		root.appendChild(cas);
 		cas.setAttributeNS(Namespace.XMI, "xmi:id", view.getId());
+		boolean setLang = false;
 		for (Annotation a : view.getAnnotations())
 		{
+			setLang = false;
 			String prefix = "vaers";
 			String atType = a.getAtType();
 			int index = atType.lastIndexOf('/');
@@ -89,12 +91,17 @@ public class Lif2Xmi implements Converter
 			if (namespace.endsWith("tcas.ecore"))
 			{
 				prefix = "tcas";
+				setLang = true;
 			}
 			String name = prefix + ":" + atType.substring(index + 1);
 			Element child = document.createElementNS(namespace, name);
 			root.appendChild(child);
 			child.setAttribute("begin", String.valueOf(a.getStart()));
 			child.setAttribute("end", String.valueOf(a.getEnd()));
+			if (setLang)
+			{
+				child.setAttribute("language", container.getLanguage());
+			}
 			child.setAttributeNS(Namespace.XMI, "xmi:id", a.getId());
 			for(Object object : a.getFeatures().entrySet())
 			{
@@ -111,7 +118,7 @@ public class Lif2Xmi implements Converter
 		sofa.setAttribute("mimeType", "text");
 		sofa.setAttribute("sofaID", sofaID);
 		sofa.setAttribute("sofaNum", sofaNum);
-		sofa.setAttribute("sofaText", container.getText());
+		sofa.setAttribute("sofaString", container.getText());
 		sofa.setAttributeNS(Namespace.XMI, "xmi:id", xmiId);
 
 		Element element = document.createElementNS(Namespace.CAS, "cas:View");
