@@ -55,15 +55,6 @@ public class Handler extends DefaultHandler
 		}
 	}
 
-//	public void endElement(String uri, String localName, String qName)
-//	{
-//		if (XmiHandler.NAMESPACE.equals(uri))
-//		{
-//			String json = Serializer.toPrettyJson(container);
-//			System.out.println(json);
-//		}
-//	}
-
 	/**
 	 * Copies an attribute from the attributes parsed from the XML to a Map instance.
 	 *
